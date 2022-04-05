@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<p><a href="/data" id="getlink">Get some data here</a></p>
+<p><a href="/data" id="deletelink">Delete things</a></p>
+
+<form id="sendform" method="post" action="/data">
+<p>
+    <label for="user">Your name:</label>
+    <input type="text" id="user" name="user">
+</p>
+<p>
+    <label for="message">Your name:</label>
+    <textarea type="text" id="message" name="message"></textarea>
+</p>
+<p>
+    <button type="submit">Send!</button>
+</p>
+
+</form>
+
+
+<form id="updateForm" method="put" action="/data">
+<p>
+    <label for="user">Your name:</label>
+    <input type="text" id="user" name="user">
+</p>
+<p>
+    <label for="message">Your name:</label>
+    <textarea type="text" id="message" name="message"></textarea>
+</p>
+<p>
+    <button type="submit">Update!</button>
+</p>
+
+</form>
+
+
+<div id="result"></div>
+
+{% endblock content %}
